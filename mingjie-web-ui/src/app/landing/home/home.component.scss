@@ -1,0 +1,205 @@
+@import url("https://fonts.googleapis.com/css?family=Poppins:200,300,400,500,600,700,800,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.home-background {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 5%;
+  min-height: 100vh;
+  background: url("../../../assets/image/home-background.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+}
+
+.home-container {
+  position: relative;
+  width: 90%;
+  min-height: calc(100vh - 10%);
+  min-height: 400px;
+  background: rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(255, 255, 255, 0.05);
+  border-radius: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 50px;
+}
+
+.home-header {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  left: 20px;
+  padding: 20px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+.home-header-logo {
+    margin-right: 70px;
+    a {
+        position: relative;
+        font-size: 1.7rem;
+        font-weight: 800;
+        color: #fff;
+        text-decoration: none;
+        text-transform: uppercase;
+    }
+    a::before {
+        content: "MINGJIE\00a0 WANG";
+        position: absolute;
+        color: #8a2435;
+        border-right: 2px solid #8a2435;
+        overflow: hidden;
+        animation: logo_animation 3s linear infinite;
+    }
+}
+@keyframes logo_animation {
+  0%,
+  10%,
+  100% {
+    width: 0%;
+  }
+  70%,
+  90% {
+    width: 100%;
+  }
+}
+
+.home-header-list {
+  display: flex;
+}
+.home-header-list li {
+  list-style: none;
+  margin: 0 10px;
+}
+.home-header-list li a {
+  text-decoration: none;
+  font-size: 1.3rem;
+  font-weight: 500;
+  color: #8a2435;
+  padding: 8px 15px;
+  border-radius: 15px;
+  transition: 0.3s;
+}
+.home-header-list li a.active,
+.home-header-list li a:hover {
+  transition: 0.3s;
+  background: #fff;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+}
+
+.home-content {
+  transform: translateX(-100px);
+  max-width: 65%;
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  border-radius: 20px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.25);
+  border-top: 1px solid rgba(255, 255, 255, 0.5);
+  border-left: 1px solid rgba(255, 255, 255, 0.5);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+  padding: 30px 40px 40px 40px;
+  margin-top: 20px;
+}
+
+.home-content h2 {
+  font-size: 1.5rem;
+  color: #8a2435;
+  margin-bottom: 10px;
+}
+.home-content p {
+  font-size: 1.3rem;
+  color: #8a2435;
+  margin-bottom: 10px;
+}
+.home-content a {
+  display: inline-block;
+  right: 0;
+  padding: 15px 30px;
+  background: #fff;
+  color: #8a2435;
+  margin-top: 10px;
+  border-radius: 30px;
+  font-size: 1.3rem;
+  font-weight: 500;
+  text-decoration: none;
+  transition: 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+}
+.home-content a:hover {
+  transition: 0.3s;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+}
+
+.home-image-box {
+  max-width: 35%;
+  transform: translateX(30px) scaleX(-1);
+}
+.home-image-box img {
+  max-width: 500px;
+  animation: character-animation 8s linear infinite;
+  &:hover {
+    animation-play-state: paused;
+  }
+}
+@keyframes character-animation {
+  0%,
+  100% {
+    transform: scale(0.95, 0.95) translate(-20px);
+  }
+  50% {
+    transform: scale(1.05, 1.05) translate(30px);
+  }
+}
+
+.home-contact-icon-list {
+  position: absolute;
+  right: -20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+.home-contact-icon-list li {
+  list-style: none;
+  cursor: pointer;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border-radius: 50%;
+  margin: 5px 0px;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+  img {
+    width: 40px;
+    height: 40px;
+  }
+  transition: 0.75s;
+  &:hover {
+    transform: scale(1.2) rotate(360deg);
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.5);
+  }
+}
+
+.home-copyright {
+  position: absolute;
+  bottom: 30px;
+  right: 50px;
+  color: #8a2435;
+}
