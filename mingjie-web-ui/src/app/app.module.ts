@@ -8,13 +8,17 @@ import { HomeComponent } from './landing/home/home.component';
 import { RegisterComponent } from './account/register/register.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
+import { LionChillComponent } from './project/lion-chill/lion-chill.component';
+import { ShyBirdsComponent } from './project/shy-birds/shy-birds.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HeaderComponent,
     HomeComponent,
-    RegisterComponent
+    RegisterComponent,
+    LionChillComponent,
+    ShyBirdsComponent
   ],
   imports: [
     BrowserModule,
